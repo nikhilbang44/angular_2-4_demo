@@ -12,3 +12,9 @@
     <li>Event Binding((event)="expression")</li>
 </ul>
 <h4>Combination of Both: Two-Way-Binding([(ngModel)]="data")</h4>
+    <p>
+    For Two-Way-Binding to work, you need to enable the  <b>ngModel</b>  directive.<br>
+     This is done by adding the <b>FormsModule</b>  to the <b>imports[]</b>  array in the AppModule.<br>
+     You then also need to add the import from <b>@angular/forms</b>  in the app.module.ts file: <br>
+       <b>import { FormsModule } from '@angular/forms'; </b>
+    </p>
