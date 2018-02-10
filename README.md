@@ -18,3 +18,7 @@
      You then also need to add the import from <b>@angular/forms</b>  in the app.module.ts file: <br>
        <b>import { FormsModule } from '@angular/forms'; </b>
     </p>
+<hr>
+
+<h2> What are Directives?</h2>
+<h4>Directives are Instructions in the DOM</h4>
