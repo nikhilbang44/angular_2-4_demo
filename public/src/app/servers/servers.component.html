@@ -4,7 +4,10 @@
         <div class="col-xs-12">
             <input type="text" class="from-control" [(ngModel)]="serverName" (input)="onUpdateServerName($event)">
             <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
-            <p *ngIf="serverStatus">{{serverCreationstatus}}</p>
+            <p *ngIf="serverStatus; else noServer">{{serverCreationstatus}}</p>
+            <ng-template #noServer>
+                <p>No server was Created</p>
+            </ng-template>
             <app-server></app-server>
         </div>
     </div>
