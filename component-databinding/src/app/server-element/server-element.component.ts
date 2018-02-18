@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, OnDestroy, ViewChild, ElementRef,ContentChild } from '@angular/core';
 import { ViewEncapsulation, OnChanges } from '@angular/core';
 
 @Component({
@@ -7,9 +7,12 @@ import { ViewEncapsulation, OnChanges } from '@angular/core';
   styleUrls: ['./server-element.component.css']
   encapsulation: ViewEncapsulation.Emulated // None, Native
 })
-export class ServerElementComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked ,OnDestroy,ViewChild{
+export class ServerElementComponent implements OnInit,
+ OnChanges, DoCheck,
+ AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked ,OnDestroy,ViewChild{
   @Input('srvElement') element: {type: string, name: string, content: string} ;
-  @ViewChild('heading') header: ElementRef
+  @ViewChild('heading') header: ElementRef;
+  @ContentChild('contentParagraph') paragraph: ElementRef;
 
   @Input() name: string;
   constructor() {
@@ -23,17 +26,18 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
   ngOnInit() {
     console.log('construnctor called!');
     console.log(this.header.nativeElement.textContent);
+    console.log('Text Contrent of paragraph:'+ this.paragraph.nativeElement.textContent);
   }
   
   ngDoCheck()
   {
     console.log('called ngDocheck');
-    
   }
 
   ngAfterContentInit()
   {
     console.log("called content ngAfterContentInit");
+    console.log('Text Contrent of paragraph:' + this.paragraph.nativeElement.textContent);
   }
   
   ngAfterContentChecked()
@@ -43,7 +47,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
 
   ngAfterViewInit()  {
       console.log("ngAfterViewInit called");
-    console.log(this.header.nativeElement.textContent);
+      console.log(this.header.nativeElement.textContent);
+      
   }
 
   ngAferViewChecked()
