@@ -22,6 +22,17 @@
 
 <h2> What are Directives?</h2>
 <h4>Directives are Instructions in the DOM</h4>
+<h3>Attribute Directives</h3>
+<ul>
+    <li>Look like a normal HTML Attribute(possibly with databinding or event binding)</li>
+    <li>Only affect/ change the element they are added to</li> 
+</ul>
+<h3>Structural Directives</h3>
+<ul>
+    <li>Look like a normal HTML Attribute but have a leading * (for desugaring)</li>
+    <li>Affect a whole area in the DOM (elements get added/ removed)</li> 
+</ul>
+
 <hr>
 <table>
   <tr>
