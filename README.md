@@ -62,7 +62,12 @@ element.
     <li>Look like a normal HTML Attribute but have a leading * (for desugaring)</li>
     <li>Affect a whole area in the DOM (elements get added/ removed)</li> 
 </ul>
-
+<h4>More about the Renderer</h4>
+<ul>
+    <li>Angular Renderer class to change the style of a HTML element. As explained in that lecture, you should use the Renderer for any DOM manipulations</li>
+    <li> more about the available Renderer methods <a href="https://angular.io/api/core/Renderer2">
+    Here</a></li>
+</ul>
 <hr>
 <table>
   <tr>
