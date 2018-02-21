@@ -1,5 +1,35 @@
 # Angular 2 Demo
 
+# Component
+ Imagine we want to build a website. divide the page into 3 components
+
+  1.  Sidebar  
+  2.  Navbar  
+  3.  course
+
+Each component has a template as well as data and logic behind view. The component can have another component.
+
+We can reuse this component. we can reuse in the total different application.
+
+The component is a typescript class. 
+
+The component is completely decoupled from document object model.
+
+In the view, we bind the properties and methods of the component. if there is a change in the property we get a corresponding change in view without any change.
+
+# Service
+Service is plan class which encapsulate any non-user  interface logic like making HTTP calls, logging business rules and so on 
+
+# The Router
+The router is purely responsible for navigation so as the user navigates from one page to other it will figure out based on changes in URL what component present to the user.
+
+# Directive 
+Directive similar to Components to manipulate the DOM but major difference between Directive and Components is 
+that we often use them to add behavior to existing DOM
+element.
+
+
+
 <h2> Understanding Databinding</h2>
     <h3>Databinding = Communication</h3>
 <h4>Ouput Data</h4>
