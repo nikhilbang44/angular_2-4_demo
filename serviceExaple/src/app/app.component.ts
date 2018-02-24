@@ -13,5 +13,5 @@ export class AppComponent {
   ngOnInit() {
     this.accounts = this.accountsService.accounts;
   }
-
+  
 }
