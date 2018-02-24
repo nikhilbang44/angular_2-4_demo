@@ -7,7 +7,7 @@ export class BetterHighlightDirective {
 
   constructor(private elRef: ElementRef , private renderer: Renderer2) { }
   @HostBinding('style.backgroundColor') backgroundColor: string = 'transparent';
-  @Input() highlightColor: string = 'blue';
+  @Input('appBetterHighlight') highlightColor: string = 'blue';
   @Input() defaultColor: string = 'transparent';
   ngOnInit()
   {
